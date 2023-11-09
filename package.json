@@ -1,0 +1,38 @@
+{
+  "name": "python-subclass-hierarchy",
+  "displayName": "Python Subclass Hierarchy",
+  "description": "Display Python subclass hierarchy in Visual Studio Code.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.55.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.getSubclasses"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.getSubclasses",
+        "title": "Get Python Subclasses"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "subclassView",
+          "name": "Python Subclasses"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "vscode": "^1.55.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.0.2"
+  }
+}
