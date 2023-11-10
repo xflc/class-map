@@ -1,38 +1,37 @@
 {
-  "name": "python-subclass-hierarchy",
-  "displayName": "Python Subclass Hierarchy",
-  "description": "Display Python subclass hierarchy in Visual Studio Code.",
-  "version": "0.0.1",
+  "name": "your-extension-name",
+  "displayName": "Your Extension Display Name",
+  "description": "Description of your extension",
+  "version": "1.0.0",
   "engines": {
-    "vscode": "^1.55.0"
+      "vscode": "^1.0.0"
   },
-  "categories": [
-    "Other"
-  ],
+  "categories": ["Other"],
   "activationEvents": [
-    "onCommand:extension.getSubclasses"
+      "onCommand:extension.refreshTree"
   ],
-  "main": "./extension.js",
+  "main": "extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "extension.getSubclasses",
-        "title": "Get Python Subclasses"
-      }
-    ],
-    "views": {
-      "explorer": [
-        {
-          "id": "subclassView",
-          "name": "Python Subclasses"
-        }
+      "views": {
+          "explorer": [
+              {
+                  "id": "helloWorld",
+                  "name": "Hello World",
+                  "iconPath": {
+                      "light": "resources/light/icon.svg",
+                      "dark": "resources/dark/icon.svg"
+                  }
+              }
+          ]
+      },
+      "commands": [
+          {
+              "command": "extension.refreshTree",
+              "title": "Refresh Tree View"
+          }
       ]
-    }
   },
   "dependencies": {
-    "vscode": "^1.55.0"
-  },
-  "devDependencies": {
-    "@types/node": "^16.0.2"
+      "vscode": "^1.0.0"
   }
 }
